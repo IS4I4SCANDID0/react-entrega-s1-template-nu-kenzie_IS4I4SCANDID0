@@ -1,17 +1,17 @@
 import { useState } from "react";
-import { MainForm } from "./components/form";
+import { FormValues } from "./components/form";
 import { Header } from "./components/header";
 import { ListValues } from "./components/listValues";
 
 function App() {
-  const [listTransactions, setListTransactions] = useState();
+  const [listTransactions, setListTransactions] = useState([{}]);
 
   return (
     <>
       <Header />
       <main>
-        <MainForm />
-        <ListValues />
+        <FormValues setListTransactions={setListTransactions} listTransactions={listTransactions} />
+        <ListValues  />
       </main>
     </>
   );

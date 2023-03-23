@@ -1,4 +1,4 @@
-export function ListValues() {
+export function ListValues({  }) {
   return (
     <>
       <ul>

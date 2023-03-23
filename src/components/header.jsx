@@ -1,8 +1,10 @@
+import logo from "./../assets/Nu Kenzie (1).svg"
+
 export function Header() {
   return(
     <>
       <header>
-        <h1><span>Nu</span>Kenzie</h1>
+       <img src={logo} alt="logo Nu Kenzie"/>
       </header>
     </>
   )
