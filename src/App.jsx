@@ -3,22 +3,13 @@ import { FormValues } from "./components/form";
 import { Header } from "./components/header";
 import { ListValues } from "./components/listValues";
 import { v4 as uuidv4 } from 'uuid';
+import "./styles/reset.css" 
+import "./styles/globalStyles.css" 
+import "./styles/header.css"
 
 function App() {
   const [listTransactions, setListTransactions] = useState([]);
-  console.log(listTransactions)
-  function addToListTransactions(formData) {
-    const newTransaction = {...formData, id: uuidv4() }
-
-    setListTransactions([...listTransactions, newTransaction])
-  } 
-
-  function removeToListTransactions(transactionId) {
-    const newTransactionList = listTransactions.filter(transaction => transaction.id !== transactionId)
-    console.log(newTransactionList)
-    setListTransactions(newTransactionList)
-  }
-
+ 
   const typeValues = [
     {
       label: "Entrada",
@@ -31,11 +22,39 @@ function App() {
     }
   ]
 
+  const earnings = listTransactions.filter(transaction => transaction.negotiationType === "entrada")
+
+  const totalEarnings = earnings.reduce((acc, negotiation) => {
+
+    return acc + negotiation.transactionValue;
+  }, 0)
+
+  const debts = listTransactions.filter(transaction => transaction.negotiationType === "despesa")
+
+  const totalDebts = debts.reduce((acc, negotiation) => {
+    
+    return acc + negotiation.transactionValue;
+  }, 0)
+
+  const totalValue = totalEarnings - totalDebts
+
+  function addToListTransactions(formData) {
+    const newTransaction = {...formData, id: uuidv4() }
+
+    setListTransactions([...listTransactions, newTransaction])
+  } 
+
+  function removeToListTransactions(transactionId) {
+    const newTransactionList = listTransactions.filter(transaction => transaction.id !== transactionId)
+  
+    setListTransactions(newTransactionList)
+  }
+
   return (
     <>
       <Header />
       <main>
-        <FormValues addToListTransactions={addToListTransactions} typeValues={typeValues} listTransactions={listTransactions} />
+        <FormValues addToListTransactions={addToListTransactions} typeValues={typeValues} listTransactions={listTransactions} totalValue={totalValue} />
         <ListValues listTransactions={listTransactions} removeToListTransactions={removeToListTransactions} />
       </main>
     </>

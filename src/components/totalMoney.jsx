@@ -1,12 +1,10 @@
-export function TotalMoney({ listTransactions }) {
+
+export function TotalMoney({ totalValue }) {
   return (
     <div className="containerValue">
       <div>
-        {/* {listTransactions.reduce((acc, currentValue) => {
-
-        })} */}
         <h2>
-          Valor total: <span>R$ 0,00</span>
+          Valor total: <span>R$ {totalValue},00</span>
         </h2>
       </div>
       <span>O valor se refere ao saldo</span>
@@ -14,4 +12,4 @@ export function TotalMoney({ listTransactions }) {
   );
 }
 
-// *** ASSISTIR A DEMO DE HOJE[24/03] A PRATIR DE 53MIN *** // 
+// *** ASSISTIR A DEMO DE ONTEM[24/03] A PRATIR DE 1h e 05min *** // 

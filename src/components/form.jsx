@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { TotalMoney } from "./totalMoney";
 
-export function FormValues({ typeValues, addToListTransactions, listTransactions }) {
+
+export function FormValues({ typeValues, addToListTransactions, listTransactions, totalValue }) {
   
   const [formData, setFormData] = useState({
     description: "",
@@ -10,9 +11,9 @@ export function FormValues({ typeValues, addToListTransactions, listTransactions
   }) 
   
   function submitForm(event) {
-    event.preventDefault()
-    formData.transactionValue = parseFloat (formData.transactionValue)
-    addToListTransactions(formData)
+    event.preventDefault();
+    formData.transactionValue = parseFloat (formData.transactionValue);
+    addToListTransactions(formData);
   }
   
   
@@ -53,7 +54,7 @@ export function FormValues({ typeValues, addToListTransactions, listTransactions
           </select>
           <button type="submit">Inserir valor</button>
         </form>
-        <TotalMoney listTransactions={listTransactions} />
+        <TotalMoney listTransactions={listTransactions} totalValue={totalValue} />
       </section>
     </>
   );

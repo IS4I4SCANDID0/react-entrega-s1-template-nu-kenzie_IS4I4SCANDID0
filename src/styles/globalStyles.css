@@ -1,0 +1,15 @@
+:root {
+  --color-brand-1: #FD377E;
+  --color-brand-2: #E34981;
+  --color-brand-3: #03B898;
+  --color-grey-0: #212529;
+  --color-grey-1: ##868E96;
+  --color-grey-2: ##E9ECEF;
+  --color-grey-3: #F8F9FA;
+  --shadow--color: #00000040;
+  --font-nunito: 'Nunito', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --radius-card: 0.25rem;
+  --radius-default: 0.5rem; 
+}
+  
