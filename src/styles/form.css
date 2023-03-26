@@ -1,0 +1,8 @@
+.registerValues__form {
+  height: 430px;
+  width: 90%;
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}

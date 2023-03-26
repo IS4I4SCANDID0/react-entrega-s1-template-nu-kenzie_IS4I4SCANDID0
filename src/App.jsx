@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import "./styles/reset.css" 
 import "./styles/globalStyles.css" 
 import "./styles/header.css"
+import "./styles/index.css"
 
 function App() {
   const [listTransactions, setListTransactions] = useState([]);
@@ -53,7 +54,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="container">
         <FormValues addToListTransactions={addToListTransactions} typeValues={typeValues} listTransactions={listTransactions} totalValue={totalValue} />
         <ListValues listTransactions={listTransactions} removeToListTransactions={removeToListTransactions} />
       </main>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { TotalMoney } from "./totalMoney";
-
+import "./../styles/form.css"
 
 export function FormValues({ typeValues, addToListTransactions, listTransactions, totalValue }) {
   
@@ -19,31 +19,31 @@ export function FormValues({ typeValues, addToListTransactions, listTransactions
   
   return (
     <>
-      <section className="spendingContainer">
-        <form onSubmit={ submitForm }>
-          <label className="mainLabel" htmlFor="description">
+      <section className="container__registerValues">
+        <form onSubmit={ submitForm } className="registerValues__form" >
+          <label htmlFor="description">
             Descrição
           </label>
-          <input
+          <input className="form__input" 
             placeholder="Digite aqui sua descrição"
             type="text"
             value={formData.description}
             onChange={(event) => setFormData({ ...formData, description: event.target.value })}
           />
           <span>Ex: Compra de Roupas</span>
-          <label className="mainLabel" htmlFor="value">
+          <label htmlFor="value">
             Valor (R$)
           </label>
-          <input
+          <input className="form__input"
             placeholder="R$ 1,00"
             type="number" 
             value={formData.transactionValue}
             onChange={(event) => setFormData({ ...formData, transactionValue: event.target.value })}
           />
-          <label className="mainLabel" htmlFor="inputValue/outputValue">
+          <label htmlFor="inputValue/outputValue">
             Tipo de valor
           </label>
-          <select
+          <select className="form__select"
             value={formData.negotiationType}
             onChange={(event) => setFormData({ ...formData, negotiationType: event.target.value })}
           >
