@@ -118,6 +118,10 @@
     height: 85px;
   }
  
+  .positive__value {
+    gap: 0.5rem;
+  }
+
   .positive__value > button {
     align-self: flex-end;
   }
@@ -126,6 +130,10 @@
     flex-direction: row;
     justify-content: space-between;
     height: 85px;
+  }
+
+  .negative__value {
+    gap: 0.5rem;
   }
 
   .negative__value > button {
