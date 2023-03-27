@@ -7,6 +7,7 @@ import "./styles/reset.css"
 import "./styles/globalStyles.css" 
 import "./styles/header.css"
 import "./styles/index.css"
+import "./styles/form.css"
 
 function App() {
   const [listTransactions, setListTransactions] = useState([]);

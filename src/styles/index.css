@@ -1,9 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 0;
-  margin-top: 5.3125rem;
+  margin-top: 2rem;
   gap: 2rem;
 }
 
@@ -11,8 +9,52 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
-  z-index: 0;
+  align-items: center;
   gap: 2rem;
-  margin: 0 auto;
+}
+
+.container__value {
+  border: solid 1px var(--border-color);
+  width: 90%;
+  height: 6.25rem;
+  border-radius: var(--radius-card);
+  padding: 1rem;
+}
+
+.value__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.value__description > h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.value__description > span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-brand-1);
+}
+
+.container__value > span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-grey-1);
+} 
+
+.container__transactionValue {
+  padding: 0 1rem;
+}
+
+.container__transactionValue > h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.container__transactionValue > h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { TotalMoney } from "./totalMoney";
-import "./../styles/form.css"
+
 
 export function FormValues({ typeValues, addToListTransactions, listTransactions, totalValue }) {
   
