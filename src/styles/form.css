@@ -67,3 +67,13 @@
   height: 2.5rem;
   border-radius: var(--radius-default);
 }
+
+
+@media(min-width: 769px) {
+  
+  .registerValues__form{
+    width: 350px;
+    height: 430px;
+    align-self: flex-end;
+  }
+}

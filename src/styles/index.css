@@ -27,34 +27,52 @@
   margin-bottom: 1rem;
 }
 
-.value__description > h2 {
+.value__description>h2 {
   font-size: 1rem;
   font-weight: 700;
 }
 
-.value__description > span {
+.value__description>span {
   font-size: 1rem;
   font-weight: 700;
   color: var(--color-brand-1);
 }
 
-.container__value > span {
+.container__value>span {
   font-size: 0.75rem;
   font-weight: 400;
   color: var(--color-grey-1);
-} 
+}
 
 .container__transactionValue {
   padding: 0 1rem;
 }
 
-.container__transactionValue > h3 {
+.container__transactionValue>h3 {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.container__transactionValue > h2 {
+.container__transactionValue>h2 {
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+
+@media(min-width: 769px) {
+
+  .container {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .container__registerValues {
+    width: 40%;
+  }
+
+  .container__value {
+    width: 350px;
+    align-self: flex-end;
+  }
 }

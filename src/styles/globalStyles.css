@@ -14,9 +14,14 @@
   --font-inter: 'Inter', sans-serif;
   --radius-card: 0.25rem;
   --radius-default: 0.5rem; 
+  --radius-btn: 0.125rem;
 }
   
 body {
   font-family: var(--font-nunito);
   background-color: var(--color-white-fixed);
+}
+
+button {
+  cursor: pointer;
 }
