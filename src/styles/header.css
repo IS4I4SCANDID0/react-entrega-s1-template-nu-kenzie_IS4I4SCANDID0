@@ -11,3 +11,10 @@ header > img {
   height: 1.0625rem;
   margin-left: 1rem;
 }
+
+@media (min-width: 769px) {
+  
+  header > img {
+    margin-left: 11.8rem;
+  }
+}
