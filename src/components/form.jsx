@@ -24,7 +24,7 @@ export function FormValues({ typeValues, addToListTransactions, listTransactions
           <label htmlFor="description">
             Descrição
           </label>
-          <input className="form__input" 
+          <input className="form__input" required
             placeholder="Digite aqui sua descrição"
             type="text"
             value={formData.description}
@@ -35,8 +35,10 @@ export function FormValues({ typeValues, addToListTransactions, listTransactions
             Valor (R$)
           </label>
           <input className="form__input"
+            min="0"
             placeholder="R$ 1,00"
-            type="number" 
+            type="number"
+            required
             value={formData.transactionValue}
             onChange={(event) => setFormData({ ...formData, transactionValue: event.target.value })}
           />
@@ -46,6 +48,7 @@ export function FormValues({ typeValues, addToListTransactions, listTransactions
           <select className="form__select"
             value={formData.negotiationType}
             onChange={(event) => setFormData({ ...formData, negotiationType: event.target.value })}
+            required
           >
             <option value="">Escolha o tipo de transação</option>
             {typeValues.map(typeValue => (
