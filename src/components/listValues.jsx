@@ -1,6 +1,5 @@
 import "./../styles/listCards.css";
 
-
 export function ListValues({ listTransactions, removeToListTransactions }) {
   return (
     <section className="container__transactionValue">
@@ -10,9 +9,9 @@ export function ListValues({ listTransactions, removeToListTransactions }) {
       ) : (
         <ul className="transactionValue__list">
           {listTransactions.map((transaction) => (
-            <>
+            <li key={transaction.id} className={transaction.negotiationType === "entrada" ? "listItem__positive" : "listItem__negative"}>
               {transaction.negotiationType === "entrada" ? (
-                <li key={transaction.id} className="listItem__positive">
+                <>
                   <div className="positive__desc">
                     <h3>{transaction.description}</h3>
                     <span>{transaction.negotiationType}</span>
@@ -21,9 +20,9 @@ export function ListValues({ listTransactions, removeToListTransactions }) {
                     <span>R$ {transaction.transactionValue},00</span>
                     <button onClick={() => removeToListTransactions(transaction.id)}>Excluir</button>
                   </div>
-                </li>
+                </>
               ) : (
-                <li key={transaction.id} className="listItem__negative">
+                <>
                   <div className="negative__desc">
                     <h3>{transaction.description}</h3>
                     <span>{transaction.negotiationType}</span>
@@ -32,9 +31,9 @@ export function ListValues({ listTransactions, removeToListTransactions }) {
                     <span>R$ {transaction.transactionValue},00</span>
                     <button onClick={() => removeToListTransactions(transaction.id)}>Excluir</button>
                   </div>
-                </li>
+                </>
               )}
-            </>
+            </li>
           ))}
         </ul>
       )}
